@@ -60,3 +60,8 @@ export type ValueOf<T> = T[keyof T];
 
 /** Type constrant for tuple inference */
 export type Tuple = [any] | any[];
+
+/** Get the class type from an instance */                       
+export type ClassType<T> = { 
+  new(...args: any[]): T;
+};
